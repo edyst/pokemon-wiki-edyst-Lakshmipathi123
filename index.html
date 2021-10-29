@@ -1,4 +1,1181 @@
 <!DOCTYPE html>
 <html>
+    <head>
+     <title>pokemon page</title>
+     <script src="https://kit.fontawesome.com/c599620c2e.js" crossorigin="anonymous"></script>
+        <style>
+
+            *{
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+            /*this is header start*/
+            nav{
+                display: flex;
+                width: 100%;
+                height: 50px;
+                align-items: center;
+                margin-right: 5px;
+                padding-bottom: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .logo{
+                width: 32%;
+                margin-left: 5px;
+                margin-top:3px ;
+            }
+            .l1{
+                width: 68%;
+            }
+            .list{
+                display: flex;
+                list-style: none;
+                justify-content: space-between;
+                align-items: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .a{
+                text-decoration: none;
+                color:  #4d4d4d;
+            }
+            select{
+                border-style: none;
+                cursor: pointer;
+                -webkit-appearance: none;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 20px;
+                font-size: 20px;
+            }
+            #apply{
+                color: white;
+                background: rgb(226, 109, 55);
+                padding: 5px 40px 5px 40px;
+                border-style: none;
+            }
+            nav .list .list1{
+               position: absolute;
+               z-index:1;
+              background-color: white;
+              display: none;
+            }
+            nav .list li:hover .list1{
+                display: block;
+                border-radius: 10px;
+            }
+            .list1{
+                list-style:none;
+            }
+            .a{
+                display: block;
+                padding: 15px;
+                border-radius: 10px;
+            }
+            .a:hover{
+                background-color: #cacf83;
+            }
+            #png{
+                margin-right: 20px;
+            }
+            .fa-caret-down{
+                margin-left: 5px;
+            }
+            /*this is header end*/
+
+            /*this is section one start*/
+
+            .container1{
+                height: 110vh;
+                background-image:url("ksqOx5F.jpeg");
+                background-size:cover;
+                position: relative;
+                color:white; 
+                font-family: Arial, Helvetica, sans-serif;
+                margin-right: 10px;
+            }
+            .overlay{
+                height: 110vh;
+                background-color:#000000b3;
+                background-size:cover;
+            }
+            .a1{
+                padding: 100px 0px 0px 110px;
+                width: 70%;
+            }
+            .b1{
+              padding: 40px 0px 20px 110px;  
+            }
+
+            #head{
+                font-size: 90px;
+            }
+            #small{
+                font-size: 33px;  
+            }
+            .a2{
+                padding: 13px 73px;
+                border: none;
+                font-size: 15px;
+                background-color:#4992ca;
+                color: white;
+                margin:10px 0px 10px 110px;
+            }
+            .a3{
+                padding: 18px 45px;
+                border: 2px solid white;
+                background-color:transparent;
+                font-size: 15px;
+                color:white;
+                margin:10px 0px 10px 110px;
+            }
+            .a4{
+                padding: 15px 10px;
+                border:0px;
+                background-color: white;
+                font-size: 15px;
+                color: black;
+                margin:10px 0px 10px 110px;
+                border-radius: 15px;
+            }
+            /*this is section one end*/
+
+            /*this is section two start*/
+            .container2{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-content: center;
+                text-align: center;
+                background-color: #4992ca;
+                color: white;
+                font-family: Avenir-Next,Roboto,sans-serif;
+                padding-top: 30px;
+                margin-right: 10px;
+            }
+            .a6{
+                font-size: 45px;
+            }  
+            .a7{
+                padding:0px 110px 15px 110px;    
+            }
+            .a8{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                padding:0px 110px 15px 110px;
+            }
+            .fa-water{
+                font-size: 45px;
+            }
+            .fa-leaf{
+                font-size: 45px;
+            }
+            .fa-fire{
+                font-size: 45px;
+            }
+            #s1{
+                padding: 40px 0px;
+            }
+            .a9{
+                font-size: 30px;
+                padding-bottom: 40px;
+            }
+            .a10{
+                margin: 1px;
+                line-height: 25px;
+                padding-bottom: 70px;
+            }
+            /*this is section two end*/
+
+            /*this is section three start*/
+            .container3{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding:50px 100px 0px 100px;
+                text-align: center;
+                font-family: Avenir-Next,Roboto,sans-serif;
+                margin-right: 10px;
+            }
+            .a11{
+                grid-column: 1/3;
+                text-align: center;
+            }
+            #a12{
+                font-size: 45px;
+            }
+            .a13{
+                padding: 0px 10px 40px 10px;
+            }
+            #a14{
+                font-size: 30px;
+            }
+            /*this is section three end*/
+
+            /*this is section four start*/
+            .container4{
+                display: grid;
+                grid-template-columns: 1fr 1.4fr 4fr;
+                padding:50px 120px 40px 120px;
+                font-family: Avenir-Next,Roboto,sans-serif;
+                margin-right: 10px;
+            }
+            .a15{
+                grid-column: 1/4;
+                text-align: center;
+                padding-bottom:40px;
+            }
+            #a16{
+                font-size: 45px;
+            }
+            .a17{
+                grid-column:1/2;
+                grid-row: 2/5;
+            }
+            .a18{
+                grid-column:2/3;
+                grid-row: 2/3;
+                text-align: center;
+            }
+            .a19{
+                grid-column:3/4;
+                grid-row:2/5;
+            }
+            .a20{
+                grid-column:1/2;
+                grid-row:5/8;
+            }
+            .a21{
+                grid-column:2/3;
+                grid-row: 5/6;
+                text-align: center;
+                }
+            .a22{
+                grid-column:3/4;
+                grid-row: 5/8;
+            }
+            .a23{
+                grid-column:1/2;
+                grid-row: 8/11;
+            }
+            .a24{
+                grid-column:2/3;
+                grid-row: 8/9;
+                text-align: center;
+            }
+            .a25{
+                grid-column:3/4;
+                grid-row:8/11;
+            }
+            .a26{
+                grid-column:1/2;
+                grid-row: 11/14;
+            }
+            .a27{
+                grid-column:2/3;
+                grid-row: 11/12;
+                text-align: center;
+            }
+            .a28{
+                grid-column:3/4;
+                grid-row:11/14;
+            }
+            .a29{
+                border-radius: 50%;
+            }
+            .a30{
+                color: rgba(0, 0, 0, 0.699);
+                font-weight: 100;
+                font-size: 30px;
+                padding-bottom: 5px;
+            }
+            .a31{
+                color: gray;
+                font-weight: 100;
+                font-size: 18px;
+                padding-bottom: 5px;
+            }
+            #a32{
+                color: gray;
+            }
+            /*this is section four end*/
+
+            /*this is section five start*/
+            .container5{
+                display: flex;
+                flex-direction: column;
+                padding:50px 120px 0px 120px;
+                background-color: #4992ca;
+                color: white;
+                font-family: Avenir-Next,Roboto,sans-serif;
+                margin-right: 10px;
+            }
+            .a33{
+                text-align: center;
+                font-size: 45px;
+                padding-bottom:40px;
+            }
+            .a34{
+                margin: 0px;
+                padding-bottom: 25px;
+            }
+            .a35{
+                margin-left: 15px;
+                line-height: 25px;
+                padding-bottom:60px ;
+            }
+            .a36{
+                margin-left: 90px;
+            }
+            .a37{
+                margin-top: 25px;
+            }
+            /*this is section five end*/
+
+            /*this is section six start*/
+            .container6{
+                padding:50px 210px 20px 210px;
+                font-family: Avenir-Next,Roboto,sans-serif;
+                margin-right: 10px;
+            }
+            #a37{
+                font-size: 45px;
+            }
+            .a38{
+                display: flex;
+            }
+            .a39{
+                flex: 1;
+                padding-right:10px;
+                line-height: 25px;
+            }
+            .a40{
+                flex: 2;
+            }
+            .a41{
+                border: 1px solid #8a8a8a;
+                border-collapse: collapse;
+                padding: 9px;
+            }
+            .a42{
+                color:#8a8a8a;
+            }
+            .a43{
+                text-align: center;
+                padding-bottom: 20px;
+            }
+            .a44{
+                padding-top: 20px;
+            }
+            .a45{
+                padding-bottom: 30px;
+                color:#8a8a8a;
+            }
+            .a46{
+                padding-bottom:10px;
+            }
+            .a47{
+                text-align: center;
+            }
+            .a48{
+                color:#4992ca;
+                font-weight: 200;
+                font-size: 20px;
+                padding-bottom: 16px;
+            }
+            #a48{
+                background-color:#4992ca;
+                color: white;
+                padding:10px 85px;
+                border: none;
+                font-weight: bold;
+            }
+            /*this is section six end*/
+
+             /*this is section seven start*/
+            .container7{
+                background-color: #424242;
+                text-align: center;
+                height: 220px;
+                color: white;
+                font-family: Avenir-Next,Roboto,sans-serif;
+                margin-right: 10px;
+            }
+            .a49{
+                padding:50px 0px 20px 0px;
+            }
+            #a49{
+                font-size: 45px;
+            }
+            #a50{
+                padding: 15px 100px;
+                background-color: transparent;
+                color: white;
+                font-weight: 500;
+                border: 2px solid white;
+            }
+            /*this is section seven end*/
+
+            /*this is section eight start*/
+            .container8{
+                padding:30px 210px 20px 210px;
+                text-align: center;
+                font-family: Avenir-Next,Roboto,sans-serif;
+                margin-right: 10px;
+            }
+            #a51{
+                font-size: 45px;
+                color:#8a8a8a;
+            }
+            .a53{
+                display: flex;
+                justify-content: center;
+            }
+            .a52{
+                border: 1px solid #f0f0f0 ;
+                width: 20%;
+                background-color:#f0f0f0 ;
+            }
+            .a54{
+                height: 20px;
+                background-color: #4992ca;
+            }
+            .a55{
+                padding:20px 0px;
+                color:#8a8a8a;
+            }
+            .a57{
+                padding: 10px 0px;
+            }
+            .a58{
+                padding: 30px 10px;
+                background-color: white;
+                border: white;
+            }
+            /*this is section eight end*/
+
+            /*this is section nine start*/
+            .container9{
+                padding:50px 120px 20px 120px;
+                background-color: #4992ca;
+                color: white;
+                font-family: Avenir-Next,Roboto,sans-serif;
+                margin-right: 10px;
+            }
+            .a59{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 60px;
+            }
+            #a58{
+                font-size: 45px;
+                padding-bottom: 30px;
+            }
+            #a59{
+                text-align: center;
+            }
+            #a60{
+                border-radius: 50%;
+            }
+            .a61{
+                text-align: center;
+                margin: 0px 50px;
+
+            }
+            #a61{
+                font-size: 30px;
+                font-weight: 100;
+            }
+            #a63{
+                font-size: 18px;
+                font-weight: 100;
+
+            }
+            .a63{
+                margin: 0px 0px 0px 20px;
+            }
+            .a64{
+                display: flex;
+                justify-content: space-between;
+            }
+            /*this is section nine end*/
+
+            /*this is section ten start*/
+            .container10{
+                font-family: Avenir-Next,Roboto,sans-serif;
+                padding:5px 250px;
+                justify-content: center;
+                margin-right: 10px;
+            }
+            .a72{
+                text-align: center;
+                margin: 20px 0px;
+            }
+            #a72{
+                font-size: 45px;
+                color:#a1a1a1;
+            }
+            .a65{
+                display: flex;
+                flex-wrap: wrap;
+                width:40%;
+                flex-direction: column;
+                border: 1px solid #f0f0f0;
+                background-color: white;
+                
+                margin-left:10px;
+            }
+            .a66{
+                background-color: #4992ca;
+                height: 15px;
+            }
+            .a67{
+                padding: 10px 20px;
+                background-color:#f0f0f0 ;
+            }
+            #a67{
+                font-size: 30px;
+            }
+            .a68{
+                padding: 20px 20px;
+                background-color:#f0f0f0 ;
+            }
+            #a68{
+                font-size: 18px;
+            }
+            .a69{
+                padding: 15px 20px;
+                line-height: 30px;
+            }
+            .a70{
+                display: flex;
+                margin-bottom: 10px;
+                justify-content: center;
+            }
+            .a71{
+                display: flex;
+                justify-content: center;
+            }
+            /*this is section ten start*/
+
+            /*this is section eleven start*/
+            .container11{
+                background-color: #424242;
+                text-align: center;
+                height: 240px;
+                color: white;
+                font-family: Avenir-Next,Roboto,sans-serif;
+                margin-right: 10px;
+            }
+            .a73{
+                padding:50px 0px 20px 0px;
+            }
+            #a73{
+                font-size:45px;
+            }
+            .a74{
+                padding:15px 100px;
+                background-color: transparent;
+                color:white;
+                border: 2px solid white;
+            }
+            #a74{
+                width: 30%;
+                padding:15px 10px;
+                margin:3px;
+                border: 2px solid white;
+            }
+             /*this is section eleven end*/
+            
+            /*this is section twelve start*/
+            .container12{
+                font-family: Avenir-Next,Roboto,sans-serif;
+                padding: 20px 230px 20px 230px;  
+                margin-right: 10px;
+            }
+            .a75{
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            #a75{
+                font-size: 45px;
+                color:#a1a1a1;
+            }
+            .a76{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                text-align: center;
+                justify-content: space-between;
+            }
+            .fa-gamepad{
+                font-size: 20px;
+                padding-left: 5px;
+            }
+            .a77{
+                margin-bottom: 25px;
+            }
+            .a78{
+                margin-bottom: 20px;
+            }
+            .a79{
+                margin:20px 0px ;
+            }
+            #a80{
+                text-align: center;
+            }
+            .a80{
+                padding: 12px 70px;
+                color: white;
+                background-color: #4992ca;
+                border: none;
+            }
+            /*this is section twelve end*/
+
+            /*this is section thirteen start*/
+            .container13{
+                background-color: #4992ca;
+                color: white;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                padding:50px 130px 20px 130px;
+                font-family: Avenir-Next,Roboto,sans-serif;
+                margin-right: 10px;
+            }
+            .a81{
+                grid-column: 1/4;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            #a81{
+                font-size: 45px;
+            }
+            #a82{
+                border-radius: 50%;
+            }
+            #a83{
+                font-size: 30px;
+                font-weight: 90;
+            }
+            .a83{
+                margin: 0px 25px 0px 0px;
+            }
+            .a84{
+                margin: 0px 10px 0px 10px;
+            }
+            .a85{
+                margin: 0px 0px 0px 40px;
+            }    
+            #a84{
+                font-size: 18px;
+            }
+            .a82{
+                text-align: center;
+                padding: 5px;
+            }
+             /*this is section thirteen end*/
+            
+            /*this is section forteen start*/
+            .container14{
+                font-family: Avenir-Next,Roboto,sans-serif;
+                padding: 20px 250px 0px 250px;  
+                margin-right: 10px;
+            }
+            .a86{
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .a88{
+                text-align: center;
+                padding-bottom:3px ;
+            }
+            #a86{
+                font-size: 45px;
+                color: #888383;
+            }
+            .a87{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                line-height: 30px;
+            }
+             /*this is section forteen end*/
+
+              /*this is section fifteen start*/
+            .container15{
+                background-color: #4992ca;
+                color: white;
+                text-align: center;
+                height: 180px;
+                font-family: Avenir-Next,Roboto,sans-serif;
+                padding: 30px;
+                margin-right: 10px;
+            }
+            .a89{
+                text-align: center;
+                margin-bottom:20px;
+            }
+            #a89{
+                font-size:45px;
+            }
+            .a90{
+                padding: 10px 85px;
+                background-color: transparent;
+                color: white;
+                font-weight: 500;
+                border: 2px solid white;
+            }
+            /*this is section fifteen start*/
+
+            /*this is footer start*/
+            footer{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                line-height: 20px;
+                padding: 30px 50px;
+                background-color: rgb(1, 9, 17);
+                color:#8d8d8d;
+                font-family: Avenir-Next,Roboto,sans-serif;
+                text-align: center;
+                line-height: 30px;
+                margin-right: 10px;
+            }
+            .a91{
+                text-decoration: none;
+                color: white;
+            }
+            .fass{
+                display: flex;
+                justify-content: space-between;
+            }
+            .fa-coffee{
+                padding-left: 5px;
+                font-size: 15px;
+            }
+            .fab{
+                color: white;
+                font-size: 15px;
+            }
+            #a92{
+                font-size: 16px;
+            }
+            .a93{
+                line-height: 38px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="edyst.png" alt="edyst_logo" width="110px">
+                </div>  
+                <div class="l1">
+                <ul class="list">
+                        <li class="15">
+                            <a class="a" href="#"><img id="png" src="OYtJCVI.png" alt="india" width="15px"><label>Pokedex</label><i class="fas fa-caret-down"></i></a>
+
+                            <ul class="list1">
+                                <li><a class="a" href="#">Generation 1</a></li>
+                                <li><a class="a" href="#">Generation 2</a></li>
+                                <li><a class="a" href="#">Generation 3</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="l5">
+                            <a  class="a"href="#"><label>Video games</label> <i class="fas fa-caret-down"></i></a>
+                            
+                            <ul class="list1">
+                                <li><a class="a" href="#">Pokemon sleep</a></li>
+                                <li><a class="a" href="#">Pokemon: lets go to pokemon</a></li>
+                                <li><a class="a" href="#">Pokemon Go</a></li>
+                            </ul>
+                        </li>
+                        
+                       
+                        <li>
+                            <a  class="a" href="#">ECard games</a>
+                        </li>
+                        <li>
+                            <a class="a" href="#">Pokemon TV</a>
+                        </li>
+                        <li>
+                            <a class="a" href="#">Pokemon Events</a>
+                        </li>
+                        <li class="l5">
+                            <a  class="a"href="#">About us<i class="fas fa-caret-down"></i></a>
+                            
+                            <ul class="list1">
+                                <li><a class="a" href="#">Contact us</a></li>
+                                <li><a class="a" href="#">Help</a></li>
+                                <li><a class="a" href="#">Support us</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button id="apply">Apply</button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <section class="container1">
+            <div class="overlay">
+            <div class="a1"><h1 id="head">WELCOME TO EDYST LEARN CODING</h1></div>
+            <div class="b1"><h3 id="small">Let's learn web development in a fun way.</h3></div>
+            <div><button class="a2">Apply Here</button></div>
+            <div><button class="a3">Register for course</button></div>
+            <div><button class="a4">Here you can learn to build beautiful websites <b>Learn More ❯</b></button></div>
+            </div>
+        </section>
     
+      
+      <section class="container2">
+        <div class="a5">
+        <div><h2 class="a6 a7">What are Pocket Monsters ?</h2></div>
+        <div><p class="a7">Pokémon is a series of video games developed by Game Freak and published by Nintendo and The Pokémon Company as part of the Pokémon media franchise. Created by Satoshi Tajiri with assistance from Ken Sugimori,the first games released in 1996 in Japan for the Game Boy, and the main series of role-playing video games (RPGs), also referred as the "core series" by their developers</p></div>
+        <div><p class="a7">Let us know some pokemon types.</p></div>
+        </div>
+        <div class="a8">
+            <div id="s1"><i class='fas fa-water '></i></div>
+            <div id="s1"><i class='fas fa-fire '></i></div>
+            <div id="s1"><i class='fas fa-leaf '></i></div>
+            <div class="a9"><h4>Water</h4></div>
+            <div class="a9"><h4>Fire</h4></div>
+            <div class="a9"><h4>Grass</h4></div>
+            <div class="a10"><strong>Water is one of the three basic elemental types along with Fire and Grass, which constitute the three starter Pokémon. This creates a simple triangle to explain the type concept easily to new players. Water is the most common type with over 100 Pokémon, which are based on a wide variety of fish and other sea-dwelling creatures.</strong></div>
+            <div class="a10"><strong>Fire is one of the three basic elemental types along with Water and Grass, which constitute the three starter Pokémon. This creates a simple triangle to explain the type concept easily to new players. Fire types are notoriously rare in the early stages of the games so choosing the Fire variation starter is often a plus.</strong></div>
+            <div class="a10"><strong>Grass is one of the three basic elemental types along with Fire and Water, which constitute the three starter Pokémon. This creates a simple triangle to explain the type concept easily to new players.Grass is one of the weakest types statistically, with 5 defensive weaknesses and 7 types that are resistant to Grass moves.</strong></div>
+        </div>
+      </section>
+            
+      <section class="container3">
+        <div class="a11"><h2 id="a12">Statistics on Pokemon Go</h2></div>
+        <div class="a13"><h4 id="a14">Statistics of weight loss</h4></div>
+        <div class="a13"><h4 id="a14">Statistics of app downloads</h4></div>
+        <div class="a13">The AR game's potential for weight loss was a big part of that discussion. In the process of getting out their doors and visiting parks, players found they were losing weight almost in spite of themselves. A Reddit Pokémon Go fan won acclaim for reporting that he'd lost 65 pounds between July and December.</div>
+        <div class="a13">Pokémon GO is one of the most successful mobile games of all time, breaking records like fastest to earn $100 million and most-downloaded in its first month of release. To date, it has grossed almost $2 billion in revenue and been downloaded 800 million times. Although no longer the global phenomenon it was in 2016, the game remains incredibly popular.</div>
+        <div><img src="3.jpg" alt="Statistics of weight loss"></div>
+        <div><img src="4.png" alt="Statistics of app downloads"></div>    
+      </section>
+
+      <section class="container4">
+        <div class="a15"><h2 id="a16">2020 Pokémon of the Year Revealed</h2></div>
+
+        <div class="a17"><img class="a29" src="5.png" alt="Greninja"width=160px></div>
+        <div class="a18">
+        <div><h4 class="a30">Greninja</h4></div>
+        <div><h6 class="a31">Water/Dark</h6></div>
+        <div><img src="6.png" alt="pokemon"width=170px></div>
+        </div>
+        <div class="a19"><p id="a32">"Greninja is the final evolution of Pokémon X and Y water-type starter Froakie. It has the ability to take on an appearance resembling its trainer. Pokedex says: Greninja creates throwing stars out of compressed water. When it spins them and throws them at high speed, these stars can split metal in two."</p></div>
+        
+        <div class="a20"><img class="a29" src="7.png" alt="Lucario"width=160px></div>
+        <div class="a21">
+        <div><h4 class="a30">Lucario</h4></div>
+        <div><h6 class="a31">Fighting, Steelr</h6></div>
+        <div><img src="6.png" alt="pokemon"width=170px></div>
+        </div>
+        <div class="a22"><p id="a32">"Lucario is a bipedal, wolf-like Pokémon with blue, cream, and black fur. It is considered to be prideful and loyal to its trainer. Pokedex says: By catching the aura emanating from others, Lucario can read their thoughts and movements."</p></div>
+        
+        <div class="a23"><img class="a29" src="8.jpg" alt="Mimikyu"width=160px></div>
+        <div class="a24">
+        <div><h4 class="a30">Mimikyu</h4></div>
+        <div><h6 class="a31">Ghost‎ ‎Fairy</h6></div>
+        <div><img src="6.png" alt="pokemon"width=170px></div>
+        </div>
+        <div class="a25"><p id="a32">"Mimikyu caused quite a stir for its peculiar looks and sad backstory when it was originally announced for Pokémon Sun and Moon in 2016. Mimikyu is described as a Pokémon who felt so lonely that it decided to wear a rag in order to look like Pikachu, everyone’s favorite Pokémon. Pokedex says: Its actual appearance is unknown. A scholar who saw what was under its rag was overwhelmed by terror and died from the shock."</p></div>
+        
+        <div class="a26"><img class="a29" src="9.jpg" alt="Charizard"width=160px></div>
+        <div class="a27">
+        <div><h4 class="a30">Charizard</h4></div>
+        <div><h6 class="a31">Flying, Fire</h6></div>
+        <div><img src="6.png" alt="pokemon"width=170px></div>
+        </div>
+        <div class="a28"><p id="a32">"Charizard is an orange draconic Pokémon who has a fiery temper. It is the final evolution of Charmander, one of the starter Pokémon for the original game. Pokedex says: Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself. "</p></div>
+      </section>
+
+      <section class="container5">
+        <div>
+            <h2 class="a33">Q and A</h2>
+        </div>
+        <div class="a34">
+            <h4>Questions Every Pokemon Trainer Should Be Able To Answer</h4>
+        </div>
+        <div  class="a35">
+            <ol type="1">
+                <li><h4>What Pokemon does Pikachu evolve into?</h4></li>
+                <ul class="a36">
+                    <li>We're sure you know this Electric mouse Pokemon, and you know it quite well. Basic knowledge of Pikachu is essential for every trainer, but you should also be well versed in the rodent's evolutionary chain. Pikachu, mighty as it is, has an even stronger evolved form also capable of generating vast amounts of electricity. Maybe you've bumped into this species in the wild. Either way, this is a question all Pokemon trainers should be able to answer.</li>
+                    <li>Answer is Raichu</li>
+                </ul>
+                <li class="a37"><h4>What's the most effective Poke Ball in the game?</h4></li>
+                <ul class="a36">
+                    <li>Not all Poke Balls are made equally. There's the basic model you start your journey off with, but progressive upgrades are needed if you're looking to keep up with some of the stronger wild Pokemon who emerge in later routes. If you've made your way through any Pokemon game, you've reached the point where you're presented with the most effective Poke Ball known to man. This is a one shot catch, and no button mashing at all is required.</li>
+                    <li>Answer is Master Ball</li>    
+                </ul>
+            </ol>
+        </div>
+      </section>
+
+      <section class="container6">
+        <div class="a43"><h2 id="a37">Pokemon Battles</h2></div>
+        <div class="a43"><h4>Here's a Pokémon Go type chart to get you started on what's effective against what</h4></div>
+        <div class="a38">
+             <div class="a39">
+                <div class="a46"><h4>Type chart, effectiveness and weakness explained in Pokémon Go</h4></div>
+                <div class="a45"><p>Pokémon battles appear in most forms of Pokémon media, being the central gameplay aspect of the core series games, as well as being a constant focus of the anime.</p></div>
+                <div class="a45"><p>Pokémon Go's Types are exactly the same as those in the main Pokémon games, but the effect of those type matchups is slightly different: in brief, things like effective or resisted attacks have slightly different multipliers to the main Pokémon games - although a December 2018 update brought them slightly closer in line.</p></div>
+             </div>
+            <div class="a40">
+                <table class="a41">
+                    <thead>
+                        <tr>
+                        <th class="a41">Type</th>
+                        <th class="a41">Strong Against</th>
+                        <th class="a41">Weak Against</th>
+                        <th class="a41">Resistant To</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                     <tr>
+                        <td class="a41 a42">Normal</td>
+                        <td class="a41 a42">None</td>
+                        <td class="a41 a42">Rock, Ghost, Steel</td>
+                        <td class="a41 a42">Ghost</td>
+                        </tr>
+                        <tr>
+                        <td class="a41 a42">Fighting</td>
+                        <td class="a41 a42">Normal, Rock, Steel, Ice, Dark</td>
+                        <td class="a41 a42">Flying, Poison, Psychic, Bug, Ghost, Fairy</td>
+                        <td class="a41 a42">Rock, Bug, Dark</td>
+                        </tr>
+                        <tr>
+                        <td class="a41 a42">Flying</td>
+                        <td class="a41 a42">Fighting, Bug, Grass</td>
+                        <td class="a41 a42">Rock, Steel, Electric</td>
+                        <td class="a41 a42">Fighting, Ground, Bug, Grass</td>
+                        </tr>
+                        <tr>
+                        <td class="a41 a42">Poison</td>
+                        <td class="a41 a42">Grass, Fairy</td>
+                        <td class="a41 a42">Poison, Ground, Rock, Ghost, Steel</td>
+                        <td class="a41 a42">Fighting, Poison, Grass, Fairy</td>
+                        </tr>
+                        <tr>
+                        <td class="a41 a42">Ground</td>
+                        <td class="a41 a42">Poison, Rock, Steel, Fire, Electric</td>
+                        <td class="a41 a42">Flying, Bug, Grass</td>
+                        <td class="a41 a42">Poison, Rock, Electric</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="a44"><p>Pokémon Go in 2020 continues to add new features, such the arrival of the Go Battle League, Remote Raids and the trade evolution feature. There are also planned changes to PokéCoins on the way. Meanwhile, coming soon is the Johto Throwback quest.</p></div>
+            </div>
+        </div>
+        <div class="a47">
+            <div><p class="a48">Book your tickets now.</p></div>
+            <div><button id="a48">Buy Now</button></div>
+        </div>
+      </section>
+
+      <section class="container7">
+        <div class="a49"><h2 id="a49">Want to know more about Pokemon?</h2></div>
+        <div class="a50"><button id="a50">Click here</button></div>
+      </section>
+
+    <section class="container8">
+        <div><h2 id="a51">Pokemon Card</h2></div>
+        <div class="a53">
+        <div class="a52">
+            <div class="a54"></div>
+            <div class="a55"><p>Greninja</p></div>
+            <div class="a56"><img src="10.png" alt="Greninja" width=100></div>
+            <div class="a57"><h4>Ability: Torrent</h4></div>
+            <div class="a58">It is the final evolution of Froakie, the Water-type starter from Kalos.</div>
+        </div>
+        </div>
+    </section>
+
+    <section class="container9">
+          <div id="a59"><h2 id="a58">Let's know about pokemon trainers</h2></div>
+          <div class="a59">
+          <div><img id="a60" src="11.png" alt="ash"width=160></div>
+          <span class="a61"><h4 id="a61">Ash Ketchum</h4>
+            <h6 id="a63">Champion of Orange League</h6>
+          <img src="6.png" alt="pokemon"width=170></span>
+          <div class="a63"><p>"Ash Ketchum, known as Satoshi in Japan, is a fictional character in the Pokémon franchise owned by Nintendo. He is the protagonist of the Pokémon anime and certain manga series as well as on various merchandise related to the franchise. In Japanese, the character is voiced by Rika Matsumoto, and Hana Takeda."</p></div>
+          </div>
+          <div class="a59">
+            <div><img id="a60" src="12.png" alt="Lance"width=160></div>
+            <span class="a61"><h4 id="a61">Lance</h4>
+                <h6 id="a63">Dragon Master</h6>
+              <img src="6.png" alt="pokemon"width=170></span>
+              <div class="a63"><p>"Lance is a recurring character in Pokémon. He is a user of Dragon-types being the final Elite Four member in Red, Blue and their remakes. In Pokémon Gold, Silver, Crystal and their remakes, he is the Champion.Lance has appeared in the Pokémon series games from Generation I-III. He first appeared in the original Red and Blue games, being the final member of the Elite Four, and again in Generation III's Red and Blue remakes, FireRed and LeafGreen. Lance in the Generation II games differed from the previous though, as he was Pokémon Champion by this time. "</p></div>
+          </div>
+          <div class="a59">
+            <div><img id="a60" src="13.png" alt="Cynthia"width=160></div>
+            <span class="a61"><h4 id="a61">Cynthia</h4>
+                <h6 id="a63">Shirona</h6>
+              <img src="6.png" alt="pokemon"width=170></span>
+              <div class="a63"><p>"Cynthia is a powerful Pokémon trainer and the Champion of the Sinnoh region where Professor Carolina, Cynthia's grandmother, runs the Pokémon Research Lab in Celestic Town. She enjoys visiting the Solaceon Town Ruins. Later, in Pokémon: DP Galactic Battles, she helps fight Team Galactic as well. In the anime, she has a villa in east Unova but in the Pokémon Black and White games, she borrows Caitlin's villa (from the Elite Four). "</p></div>
+          </div>
+          <div class="a64">
+            <div><img id="a60" src="14.png" alt="Ipsum lorem"width=160></div>
+            <span class="a61"><h4 id="a61">Ipsum lorem</h4>
+                <h6 id="a63">Ookido Yukinari Hakase</h6>
+              <img src="6.png" alt="pokemon"width=170></span>
+              <div class="a63"><p>"Ookido Yukinari Hakaseamuel Oak is most notable for his vast research facility, where he cares for and studies hundreds of Pokémon, including those owned by, but not currently traveling with, Trainers from Pallet Town. He has confidence in his grandson, Gary Oak, but more often joins Ash's mother and friends in cheering on Ash in his competitions. "</p></div>
+          </div>
+    </section>
+
+        <section class="container10">
+            <div class="a72"><h2 id="a72">Generations - Cards</h2></div>
+            <div class="a70">
+            <div class="a65">
+                <div class="a66"></div>
+                <div class="a67"><h4 id="a67">First generation</h4></div>
+                <div class="a68"><h6 id="a68">(1996–1999)</h6></div>
+                <div class="a69"><p>The original Pokémon games are Japanese role-playing video games (RPGs) with an element of strategy, and were created by Satoshi Tajiri for the Game Boy. The Pokémon series began with the release of Pocket Monsters Red and Green for the Game Boy in Japan. When these games proved popular, an enhanced Blue version was released sometime after, and the Blue version was reprogrammed as Pokémon Red and Blue for international release. The original Green version was not released outside Japan</p></div>
+            </div>
+            <div class="a65">
+                <div class="a66"></div>
+                <div class="a67"><h4 id="a67">Second generation</h4></div>
+                <div class="a68"><h6 id="a68">(1999–2002)</h6></div>
+                <div class="a69"><p>The second generation of Pokémon video games began in 1999 with the Japanese release of Pokémon Gold and Silver for the Game Boy Color, with Australia and North America getting the game in October 2000 and European release date of April 2001. Like the previous generation, an enhanced version, titled Pokémon Crystal, was later released.</p></div>
+            </div>
+            </div>
+            <div class="a71">
+            <div class="a65">
+                <div class="a66"></div>
+                <div class="a67"><h4 id="a67">Third generation</h4></div>
+                <div class="a68"><h6 id="a68">(2002–2006)</h6></div>
+                <div class="a69"><p>Pokémon entered its third generation with the 2002 release of Pokémon Ruby and Sapphire for Game Boy Advance and continued with the Game Boy Advance remakes of Pokémon Red and Green, Pokémon FireRed and LeafGreen (Red and Green representing the original Japanese first generation games; territories outside Japan instead saw releases of Red and Blue). An enhanced remake of Pokémon Ruby and Sapphire titled Pokémon Emerald followed after.</p></div>
+            </div>
+            <div class="a65">
+                <div class="a66"></div>
+                <div class="a67"><h4 id="a67">Fourth generation</h4></div>
+                <div class="a68"><h6 id="a68">(2006–2010)</h6></div>
+                <div class="a69"><p>In 2006, Japan began the fourth generation of the franchise with the release of Pokémon Diamond and Pearl for Nintendo DS. The games were released in North America on April 22, 2007 and in Australia on June 21, 2007. The game was released in the UK and Europe on July 27, 2007. Other main series games in the fourth generation include Pokémon Platinum, a director's cut version of Diamond and Pearl in the same vein as Pokémon Yellow, Crystal, and Emerald.It was released for the Nintendo DS in Japan on September 13, 2008, in North America on March 22, 2009, and in Australia and Europe on May 14, 2009 and May 22, 2009</p></div>
+            </div>
+            </div>
+            </div>
+        </section>
+
+      <section class="container11">
+          <div class="a73"><h2 id="a73">Enter your email to subscribe pokemon channel</h2></div>
+          <div><input id="a74" type="email" placeholder="you@example.com" width="100%"><button class="a74">Submit</button></div>
+      </section>
+
+      <section class="container12">
+          <div class="a75"><h2 id="a75">Pokemon games</h2></div>
+          <div class="a76">
+          <div>
+              <div class="a77"><h4 id="a77">Pokémon Sleep<i class="fas fa-gamepad"></i></h4></div>
+              <div class="a78"><p id="a78">Pokémon Sleep is an upcoming mobile game for Android and iOS, as part of the Pokémon series.</p></div>
+              <div><img src="15.png" alt="pokemon sleep" width="250px"></div>
+              <div class="a79"><p id="a79">Publisher: The Pokémon Company</p></div>
+          </div>
+          <div>
+            <div class="a77"><h4 id="a77">Pokémon: Let's Go, Pikachu!<i class="fas fa-gamepad"></i></h4></div>
+            <div class="a78"><p id="a78">Take a Pokémon™ journey to the Kanto region with your energetic partner, Pikachu!</p></div>
+            <div><img src="16.jpeg" alt="pokemon" width="120px"></div>
+            <div class="a79"><p id="a79">Publishers: Nintendo, The Pokémon Company</p></div>
+          </div>
+          <div>
+            <div class="a77"><h4 id="a77">Pokémon GO<i class="fas fa-gamepad"></i></h4></div>
+            <div class="a78"><p id="a78">Pokémon Go is a 2016 augmented reality mobile game developed.</p></div>
+            <div><img src="17.jpeg" alt="pokemon" width="193px"></div>
+            <div class="a79"><p id="a79">Developer: Niantic</p></div>
+          </div>
+          </div>
+          <div id="a80"><button class="a80">See More Here</button></div>
+      </section>
+
+      <section class="container13">
+          <div class="a81"><h2 id="a81">Designers</h2></div>
+          <div class="a83">
+              <div class="a82"><img id="a82" src="18.jpeg" alt="Junichi Masuda"width="180px"></div>
+              <div class="a82"><h4 id="a83">Junichi Masuda</h4></div>
+              <div class="a82"><p id="a84">Japanese video game designer</p></div>
+              <div class=><p>"Junichi Masuda is a Japanese video game composer, director, designer, producer, singer, and programmer best known for his work in the Pokémon franchise. He is a member of the Game Freak board of directors, and has been employed at the company since 1989 when he founded it along Satoshi Tajiri and Ken Sugimori "</p></div>
+          </div>
+          <div class="a84">
+            <div class="a82"><img id="a82" src="19.jpeg" alt="Shigeki Morimoto"width="180px"></div>
+            <div class="a82"><h4 id="a83">Shigeki Morimoto</h4></div>
+            <div class="a82"><p id="a84">Game designer</p></div>
+            <div class=><p>"Shigeki Morimoto is a game designer and programmer currently working at Game Freak. He has been involved in nearly every main series Pokémon game, since Pokémon Red and Blue Versions where he was a programmer, and the creator of the battle system and the Pokémon "Mew". "</p></div>
+          </div>
+          <div class="a85">
+            <div class="a82"><img id="a82" src="20.png" alt="Ken Sugimori"width="193px"></div>
+            <div class="a82"><h4 id="a83">Ken Sugimori</h4></div>
+            <div class="a82"><p id="a84">Japanese video game designer</p></div>
+            <div class=><p>"Ken Sugimori is a Japanese video game designer, illustrator, manga artist, and director. He is most famous as the character designer and art director for the Pokémon franchise. Sugimori is also credited with the art direction for other titles, including Pulseman "</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container14">
+          <div class="a86"><h2 id="a86">Logos</h2></div>
+          <div class="a88"><p>Pokémon is short for the original Japanese title of Pocket Monsters. Created by. Satoshi Tajiri.</p></div>
+          <div class="a87">
+            <div>
+              <div><img src="6.png" alt="pokemon" width="140px"></div>
+              <div><img src="6.png" alt="pokemon" width="140px"></div>
+              <div><img src="6.png" alt="pokemon" width="140px"></div>
+            </div>
+            <div>
+                <div><img src="6.png" alt="pokemon" width="140px"></div>
+                <div><img src="6.png" alt="pokemon" width="140px"></div>
+                <div><img src="6.png" alt="pokemon" width="140px"></div>
+            </div>
+            <div>
+                <div><img src="6.png" alt="pokemon" width="140px"></div>
+                <div><img src="6.png" alt="pokemon" width="140px"></div>
+                <div><img src="6.png" alt="pokemon" width="140px"></div>
+            </div>
+          </div>
+      </section>
+
+      <section class="container15">
+          <div class="a89"><h2 id="a89">Want to know more?</h2></div>
+          <div><button class="a90">Click Here</button></div>
+        </section>
+
+      <footer class="footer">
+          <div>
+            <div><h6 id="a92">Pokemon Company<h6></div>
+            <div><a class="a91" href="#">What's New</a></div>
+            <div><a class="a91" href="#">Guide</a></div>
+            <div><a class="a91" href="#">Customer Service</a></div>
+            <div><a class="a91" href="#">About our company</a></div>
+          </div>
+
+          <div>
+            <div><h6 id="a92">For Companies<h6></h6></div>
+            <div><a class="a91" href="#">Policy</a></div>
+            <div><a class="a91" href="#">Terms of use</a></div>
+            <div><a class="a91" href="#">Privacy</a></div>
+            <div><a class="a91" href="#">Support</a></div>
+          </div>
+
+          <div>
+            <div><h6 id="a92">Resources<h6></h6></div>
+            <div><a class="a91" href="#">Request a Feature</a></div>
+            <div><a class="a91" href="#">Careers</a></div>
+            <div><a class="a91" href="#">FAQ</a></div>
+            <div><a class="a91" href="#">Support</a></div>
+          </div>
+
+          <div class="a93">
+            <div><h6 id="a92">Social<h6></h6></div>
+            <div class="fass">
+                <div><i class="fab fa-instagram"></i></div>
+                <div><i class="fab fa-facebook"></i></div>
+                <div><i class="fab fa-twitter"></i></div>
+            </div>
+            <div><h6 id="a92">1201 © Poke</h6></div>
+            <div><a class="a91" href="#">- Buy me a coffee<i class="fas fa-coffee"></i></a></div>
+          </div>
+      </footer>
+    </body>
 </html>
